@@ -1,1 +1,2 @@
 # Assign-05-PHP-StarTriangleFlipped
+[![GitHub's Super Linter](https://github.com/ICS20-Programming-JulienL/Assign-05-PHP-StarTriangleFlipped/workflows/GitHub's%20Super%20Linter/badge.svg)](https://github.com/ICS20-Programming-JulienL/Assign-05-PHP-StarTriangleFlipped/actions)
