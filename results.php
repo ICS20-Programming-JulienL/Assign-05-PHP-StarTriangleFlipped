@@ -20,26 +20,24 @@
   $starUpsideDown = "";
 
 // if userInteger is an empty string or is less than or equal to 0, then tell the user to input a postive integer
- if(($userInteger == "") || ($userInteger <= 0)) {
+if (($userInteger == "") || ($userInteger <= 0)) {
     $results = "Please enter a positive integer greater than 0.";
-  }
+}
 
 else {
   //otherwise, use a do...while loop to display an upright, right, and flipped triangle
-  do {
-       if ($counter % 5 == 0) {
+    do {
+        if ($counter % 5 == 0) {
+          
+            //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
+            $star = str_repeat("o",$counter);
 
-         //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
-         $star = str_repeat("o",$counter);
+            // add a line break
+            $results = $results . $star . "<br>";
 
-         // add a line break
-          $results = $results . $star . "<br>";
-
-         //increment the counter
-          $counter++;
-       }
-
-
+            //increment the counter
+            $counter++;
+        }
        //otherwise, if the counter is not a multiple of 5, reapt the star symbol the number of times that the counter is equal to.
        else if ($counter % 5 != 0) {
          //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
