@@ -1,3 +1,4 @@
+
 <?php
    // initialize numbers to an empty string
   $results = "";
@@ -13,26 +14,26 @@
 
 
   // initialize resultsUpsideDown to an empty string
-  $resultsUpsideDown= "";
+  $resultsUpsideDown = "";
 
   // initialize counterUpsideDown to an empty string
   $starUpsideDown = "";
 
-// if userInteger is an empty string or is less than or equal to 0, then tell the user to input a postive integer 
-if(($userInteger=="") || ($userInteger <= 0)) {
-  $results = "Please enter a positive integer greater than 0.";
-}
+// if userInteger is an empty string or is less than or equal to 0, then tell the user to input a postive integer
+ if(($userInteger == "") || ($userInteger <= 0)) {
+    $results = "Please enter a positive integer greater than 0.";
+  }
 
-//otherwise, use a do...while loop to display an upright, right, and flipped triangle, and use a for...loop to display an inverted, right, flipped triangle
 else {
+  //otherwise, use a do...while loop to display an upright, right, and flipped triangle
   do {
        if ($counter % 5 == 0) {
 
          //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
-         $star= str_repeat("o",$counter);
+         $star = str_repeat("o",$counter);
 
          // add a line break
-          $results= $results.$star."<br>";
+          $results = $results . $star . "<br>";
 
          //increment the counter
           $counter++;
@@ -45,23 +46,24 @@ else {
           $star = str_repeat("*",$counter);
 
           // add a line break
-          $results = $results.$star."<br>";
+          $results = $results . $star . "<br>";
 
          //increment the counter
           $counter++;
         }
      } while ($counter <= $userInteger);
 
-     for ($counterUpsideDown=$userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) {
+      //use a for...loop to display an inverted, right, flipped triangle
+     for ($counterUpsideDown = $userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) {
 
        
        if ($counterUpsideDown % 5 == 0) {
 
           //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
-        $starUpsideDown= str_repeat("o",$counterUpsideDown);
+        $starUpsideDown = str_repeat("o",$counterUpsideDown);
 
         // add a line break
-        $resultsUpsideDown= $resultsUpsideDown.$starUpsideDown."<br>";
+        $resultsUpsideDown = $resultsUpsideDown . $starUpsideDown . "<br>";
        }
         else if ($counterUpsideDown % 5 != 0) {
 
@@ -69,14 +71,14 @@ else {
           $starUpsideDown = str_repeat("*",$counterUpsideDown);
 
          // add a line break
-      $resultsUpsideDown= $resultsUpsideDown.$starUpsideDown."<br>";
+      $resultsUpsideDown = $resultsUpsideDown . $starUpsideDown . "<br>";
       }
      }
   
 }
 
   //display results
-  echo $results.$resultsUpsideDown;
+  echo $results . $resultsUpsideDown;
     // define the resultsUpsideDown statement
   
 ?>
