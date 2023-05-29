@@ -36,35 +36,35 @@ else {
             //increment the counter
             $counter++;
         }
-       //otherwise, if the counter is not a multiple of 5, reapt the star symbol the number of times that the counter is equal to.
-       else if ($counter % 5 != 0) {
-         //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
-          $star = str_repeat("*",$counter);
+       //otherwise, repeat the star symbol the number of times that the counter is equal to.
+        else if ($counter % 5 != 0) {
+            //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
+            $star = str_repeat("*",$counter);
 
-          // add a line break
-          $results = $results . $star . "<br>";
+            // add a line break
+            $results = $results . $star . "<br>";
 
-         //increment the counter
-          $counter++;
+            //increment the counter
+            $counter++;
+         }
+    } while ($counter <= $userInteger);
+    //use a for...loop to display an inverted, right, flipped triangle
+    for ($counterUpsideDown = $userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) { 
+        if ($counterUpsideDown % 5 == 0) {
+           //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
+            $starUpsideDown = str_repeat("o",$counterUpsideDown);
+
+            // add a line break
+            $resultsUpsideDown = $resultsUpsideDown . $starUpsideDown . "<br>";
         }
-     } while ($counter <= $userInteger);
-      //use a for...loop to display an inverted, right, flipped triangle
-     for ($counterUpsideDown = $userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) { 
-       if ($counterUpsideDown % 5 == 0) {
-          //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
-        $starUpsideDown = str_repeat("o",$counterUpsideDown);
+        elseif ($counterUpsideDown % 5 != 0) {
+            //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
+            $starUpsideDown = str_repeat("*",$counterUpsideDown);
 
-        // add a line break
-        $resultsUpsideDown = $resultsUpsideDown . $starUpsideDown . "<br>";
-       }
-        else if ($counterUpsideDown % 5 != 0) {
-          //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
-          $starUpsideDown = str_repeat("*",$counterUpsideDown);
-
-         // add a line break
-      $resultsUpsideDown = $resultsUpsideDown . $starUpsideDown . "<br>";
-      }
-     }
+            // add a line break
+            $resultsUpsideDown = $resultsUpsideDown . $starUpsideDown . "<br>";
+        }
+    }
 }
 
   //display results
