@@ -49,9 +49,7 @@ else {
         }
      } while ($counter <= $userInteger);
       //use a for...loop to display an inverted, right, flipped triangle
-     for ($counterUpsideDown = $userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) {
-
-       
+     for ($counterUpsideDown = $userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) { 
        if ($counterUpsideDown % 5 == 0) {
           //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
         $starUpsideDown = str_repeat("o",$counterUpsideDown);
@@ -71,7 +69,3 @@ else {
 
   //display results
   echo $results . $resultsUpsideDown;
-    // define the resultsUpsideDown statement
-  
-?>
-
