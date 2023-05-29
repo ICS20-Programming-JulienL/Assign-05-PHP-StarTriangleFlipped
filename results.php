@@ -9,7 +9,7 @@
   $star = "";
 
   // get userInteger from user input
-  $userInteger1 = $_POST["first-int"];
+  $userInteger = $_POST["first-int"];
 
 
   // initialize resultsUpsideDown to an empty string
@@ -50,7 +50,7 @@ else {
          //increment the counter
           $counter++;
         }
-     } while ($counter <= $userInteger1);
+     } while ($counter <= $userInteger);
 
      for ($counterUpsideDown=$userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) {
 

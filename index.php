@@ -9,10 +9,10 @@
     <meta name="author" content="Julien L.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Code for the favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index_php/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index_php/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index_php/favicon-16x16.png">
-    <link rel="manifest" href="./fav_index_php/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index_php1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index_php1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index_php1/favicon-16x16.png">
+    <link rel="manifest" href="./fav_index_php1/site.webmanifest">
     <!--Link to MDL-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-deep_purple.min.css"/>
@@ -44,37 +44,87 @@
       <!--Display Statement for Museum Admission-->
       <iframe id="result" name="result">
  <?php
-    // initialize numbers to an empty string
-    $numbers = "";
+   // initialize results to an empty string
+  $results = "";
 
-    // initialize counter to 0
-    $counter = 0;
+  // initialize counter to 1
+  $counter = 1;
 
-    // initialize factorial to 1
-    $factorial = 1;
+  // initialize star to empty string
+  $star = "";
 
-    // get userInteger from user input
-    $userInteger = $_POST["first-int"];
+  // get userInteger from user input
+  $userInteger = $_POST["first-int"];
 
-    // if userInteger is equal to an empty string or is less than 0, ask them to enter a positive integer
-    if (($userInteger == "") || ($userInteger < 0)) {
-        $numbers = "Please enter a positive integer.";
-    } else {
-      // otherwise, use a do...while loop to calculate the factorial of userInteger
-        do {
-            // calculate the factorial by multiplying the factorial variable by the counter plus one
-            $factorial = $factorial * ($counter + 1);
 
-            // increment the counter
-            $counter = $counter + 1;
-        } while ($counter < $userInteger);
-        // define the numbers statement
-        $numbers = $userInteger . "! = " . $factorial;
-    }
+  // initialize resultsUpsideDown to an empty string
+  $resultsUpsideDown= "";
 
-    // display the factorial
-    echo $numbers;
-    ?>
+  // initialize counterUpsideDown to an empty string
+  $starUpsideDown = "";
+
+// if userInteger is an empty string or is less than or equal to 0, then tell the user to input a postive integer 
+if(($userInteger=="") || ($userInteger <= 0)) {
+  $results = "Please enter a positive integer greater than 0.";
+}
+
+//otherwise, use a do...while loop to display an upright, right, and flipped triangle, and use a for...loop to display an inverted, right, flipped triangle
+else {
+  do {
+       if ($counter % 5 == 0) {
+
+         //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
+         $star= str_repeat("o",$counter);
+
+         // add a line break
+          $results= $results.$star."<br>";
+
+         //increment the counter
+          $counter++;
+       }
+
+
+       //otherwise, if the counter is not a multiple of 5, reapt the star symbol the number of times that the counter is equal to.
+       else if ($counter % 5 != 0) {
+         //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
+          $star = str_repeat("*",$counter);
+
+          // add a line break
+          $results = $results.$star."<br>";
+
+         //increment the counter
+          $counter++;
+        }
+     } while ($counter <= $userInteger);
+
+     for ($counterUpsideDown=$userInteger;$counterUpsideDown >= 0; $counterUpsideDown--) {
+
+       
+       if ($counterUpsideDown % 5 == 0) {
+
+          //every 5 lines, repeat the planet symbol "o" the number of times that the counter is equal to.
+        $starUpsideDown= str_repeat("o",$counterUpsideDown);
+
+        // add a line break
+        $resultsUpsideDown= $resultsUpsideDown.$starUpsideDown."<br>";
+       }
+        else if ($counterUpsideDown % 5 != 0) {
+
+          //every 5 lines, repeat the star symbol the number of times that the counter is equal to.
+          $starUpsideDown = str_repeat("*",$counterUpsideDown);
+
+         // add a line break
+      $resultsUpsideDown= $resultsUpsideDown.$starUpsideDown."<br>";
+      }
+     }
+  
+}
+
+  //display results
+  echo $results.$resultsUpsideDown;
+    // define the resultsUpsideDown statement
+  
+?>
     </iframe>
       <!-- MDL Progress Bar with Indeterminate Progress -->
       <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
