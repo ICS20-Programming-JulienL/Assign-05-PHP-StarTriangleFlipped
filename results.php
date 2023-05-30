@@ -12,7 +12,7 @@
     // if userInteger is an empty string or is less than or equal to 0, then tell the user to input a positive integer
 if (($height == "") || ($height <= 0)) {
     echo "Please enter a positive integer greater than 0.";
-    }
+}
 
     //otherwise, display an upright, right, and flipped triangle
 else {
@@ -25,7 +25,6 @@ else {
 
       //use a do...while loop for printing the stars, while the counter is less than or equal to counterSpace
         do {
-
            // calculate amount of stars to displau
            $star= str_repeat("*", $counter+1);
 
