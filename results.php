@@ -10,23 +10,21 @@
     $height = $_POST["height"];
 
     // if userInteger is an empty string or is less than or equal to 0, then tell the user to input a positive integer
-    if (($height == "") || ($height <= 0)) {
+if (($height == "") || ($height <= 0)) {
     echo "Please enter a positive integer greater than 0.";
-}
+    }
 
     //otherwise, display an upright, right, and flipped triangle
-    else{
-
+else {
       //use a for loop for the spacing while coutnerSpacing is less than the difference of the height and counterSpace
-    for($counterSpace = 0; $counterSpace < $height; $counterSpace++) {
-        for($counterSpacing = 1; $counterSpacing < $height - $counterSpace; $counterSpacing++) {
-          
+    for ($counterSpace = 0; $counterSpace < $height; $counterSpace++) {
+        for ($counterSpacing = 1; $counterSpacing < $height - $counterSpace; $counterSpacing++) {
           // print spaces
             echo "&nbsp;&nbsp;";
         }
 
       //use a do...while loop for printing the stars, while the counter is less than or equal to counterSpace
-      do {
+        do {
 
            // calculate amount of stars to displau
            $star= str_repeat("*", $counter+1);
