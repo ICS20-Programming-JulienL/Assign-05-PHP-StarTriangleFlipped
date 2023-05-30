@@ -48,6 +48,7 @@
       </div>
       <!-- MDL Progress Bar with Indeterminate Progress -->
       <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+      <img src="./images/starImage.jfif" alt="Star Image PHP">
     </center>
   </body>
 </html>

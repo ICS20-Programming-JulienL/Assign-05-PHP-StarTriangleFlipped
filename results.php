@@ -9,7 +9,7 @@
     // get height from the user
     $height = $_POST["height"];
 
-    // if userInteger is an empty string or is less than or equal to 0, then tell the user to input a positive integer
+    // if the height is an empty string or is less than or equal to 0, then tell the user to input a positive integer
 if (($height == "") || ($height <= 0)) {
     echo "Please enter a positive integer greater than 0.";
 }
@@ -24,7 +24,7 @@ else {
 
       //use a do...while loop for printing the stars, while the counter is less than or equal to counterSpace
         do {
-            // calculate amount of stars to displau
+            // calculate the amount of stars to display
             $star = str_repeat("*", $counter + 1);
 
             // increment the counter
