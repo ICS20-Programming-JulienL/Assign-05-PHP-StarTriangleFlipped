@@ -4,7 +4,7 @@
   <head>
     <!-- Metadata -->
     <meta charset="utf-8">
-    <meta name="description" content="Inverted, flipped, right triangle of stars">
+    <meta name="description" content="Flipped, right triangle of stars">
     <meta name="keywords" content="immaculata, ics2o">
     <meta name="author" content="Julien L.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Title -->
-    <title>Inverted, flipped, right triangle of stars</title>
+    <title>Flipped, right triangle of stars</title>
   </head>
   <body>
     <!-- Google's MDL -->
@@ -29,7 +29,7 @@
     <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <!--Header and Text-->
     <center>
-      <?php echo "<h1>Inverted, flipped, right triangle of stars</h1>" ?>
+      <?php echo "<h1>Flipped, right triangle of stars</h1>" ?>
       <?php echo "<h4>By: Julien Lamoureux</h4>" ?>
       <?php echo "<h4>Course: ICS20 Programming</h4>" ?>
       <br>
