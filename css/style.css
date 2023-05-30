@@ -1,0 +1,33 @@
+/* Created by: Julien Lamoureux
+* Created on: May 2023
+* This CSS file defines the style for index.html
+* Assign-05-PHP-StarTriangleFlipped
+*/
+
+body {
+  background-color: #f9ffeb;
+}
+
+h3 {
+  background-color: #e7ffa3;
+  padding: 40px;
+  text-align: center;
+}
+
+p {
+  color: #000;
+}
+
+#content {
+    text-align: right;
+    float: right;
+    position: relative;
+    right: 50%;
+}
+
+#result {
+  text-align: right;
+    float: right;
+    position: relative;
+    right: -40%;
+}
